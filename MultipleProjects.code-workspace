@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "JavaPosts"
+		},
+		{
+			"path": "httpproject"
+		},
+		{
+			"path": "BackendJavaDemo"
+		},
+		{
+			"path": "httpclient01"
+		},
+		{
+			"path": "rxjsOperators"
+		},
+		{
+			"path": "angularapp"
+		}
+	],
+	"settings": {}
+}

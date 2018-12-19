@@ -1,0 +1,10 @@
+<h1>Users List</h1>
+
+<div *ngFor = "let user of users | async">
+ <div class="container"> 
+   {{ user.firstName  }} 
+   {{ user.lastName }}
+   {{ user.email }}
+  </div>
+</div>
+
