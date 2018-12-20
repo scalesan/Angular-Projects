@@ -1,9 +1,9 @@
-<h1>Users List</h1>
-
+<div class="container">
+  Users List
+</div>
 <div *ngFor = "let user of users | async">
  <div class="container"> 
-   {{ user.firstName  }} 
-   {{ user.lastName }}
+   <h1>{{ user.firstName  }} {{ user.lastName }}</h1>
    {{ user.email }}
   </div>
 </div>

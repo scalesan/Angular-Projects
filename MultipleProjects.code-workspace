@@ -17,6 +17,12 @@
 		},
 		{
 			"path": "angularapp"
+		},
+		{
+			"path": "devlogger"
+		},
+		{
+			"path": "chartsproj"
 		}
 	],
 	"settings": {}
