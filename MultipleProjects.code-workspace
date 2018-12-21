@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "chartsproj"
+		},
+		{
+			"path": "piechart"
 		}
 	],
 	"settings": {}

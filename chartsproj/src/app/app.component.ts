@@ -9,19 +9,20 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 
 export class AppComponent {
+  title = "Pie Chart"
 
   constructor (private httpService: HttpClient) { }
 
-  labels =  ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  labels =  ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'];
 
   // OBJECT FOR datasets WITH EMPTY data.
   chartData = [
     {
-      label: '1st Year',
+      label: 'Base',
       data: [], 
     },
     { 
-      label: '2nd Year',
+      label: 'Current',
       data: []
     }
    ];
@@ -29,10 +30,33 @@ export class AppComponent {
    // CHART COLOR.
    colors = [
     { // 1st Year.
-      backgroundColor: 'rgba(77,83,96,0.2)'
+      backgroundColor: [
+        'rgba(255, 99, 132)',
+        'rgba(54, 162, 235)',
+        'rgba(255, 206, 86)',
+        'rgba(75, 192, 192)',
+        'rgba(153, 102, 255)',
+        'rgba(255, 159, 64)',
+        'rgba(255, 99, 132)',
+        'rgba(54, 162, 235)',
+        'rgba(255, 206, 86)',
+        'rgba(75, 192, 192)',
+        'rgba(153, 102, 255)',
+        'rgba(255, 159, 64)',
+
+    ],
+      
     },
     { // 2nd Year.
-      backgroundColor: 'rgba(30, 169, 224, 0.8)'
+      backgroundColor: [
+        'rgba(255, 159, 64)',
+        'rgba(75, 192, 192)',
+        'rgba(75, 192, 192)',
+        'rgba(255, 206, 86)',
+        'rgba(54, 162, 235)',
+        'rgba(255, 99, 132)',
+
+      ]
     }
    ]
   
