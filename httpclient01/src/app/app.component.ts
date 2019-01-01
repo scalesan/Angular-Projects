@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpHeaders, HttpParams, HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './models/user';
+import { UserService } from './services/user.service';
+
 
 @Component({
   selector: 'app-root',
@@ -12,30 +14,26 @@ import { User } from './models/user';
 export class AppComponent implements OnInit {
   title = 'app';
   user: User;
+  users: User[]
+  
 
-  users: Observable<any>;
-
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient, private userservice: UserService){
 
   }
 
-  getUsers(){
-    //let headers = new HttpHeaders().set('Authorization', 'auth-token');
-    let params = new HttpParams();
+    ngOnInit() {
+    this.userservice.getUsers().subscribe(data => {
+      console.log(data)
+    })
 
-    //this.posts = this.http.get(this.Root_URL + '/posts', { headers })
-    // this.posts = this.http.get(this.Root_URL + '/posts', { params})
+    // let apiUrl: string = 'http://localhost:8080/users';
+    // this.users = this.http.get<User[]>(apiUrl);
+    // this.users.subscribe(
+    //   response => console.log(response),
+    //   err => console.log(err)
+  // )
+}
 
-    this.users = this.http.get<User[]>('http://localhost:8080/users')
-  }
 
-  ngOnInit():void {
 
-    let apiUrl: string = 'http://localhost:8080/users';
-    this.users = this.http.get<User[]>(apiUrl);
-    this.users.subscribe(
-      response => console.log(response),
-      err => console.log(err)
-  )
-  }
 }

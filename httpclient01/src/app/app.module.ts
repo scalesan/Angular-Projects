@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { UserService } from './services/user.service'
+import { UserService } from './services/user.service';
+import { NewUserFormComponent } from './new-user-form/new-user-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewUserFormComponent
   ],
   imports: [
     BrowserModule,

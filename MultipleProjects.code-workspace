@@ -1,31 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "JavaPosts"
-		},
-		{
-			"path": "httpproject"
+			"path": "httpclient01"
 		},
 		{
 			"path": "BackendJavaDemo"
 		},
 		{
-			"path": "httpclient01"
-		},
-		{
-			"path": "rxjsOperators"
-		},
-		{
-			"path": "angularapp"
-		},
-		{
 			"path": "devlogger"
 		},
 		{
-			"path": "chartsproj"
+			"path": "angular-tour-of-heroes"
 		},
 		{
-			"path": "piechart"
+			"path": "angularapp"
 		}
 	],
 	"settings": {}

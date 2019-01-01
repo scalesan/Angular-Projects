@@ -7,19 +7,19 @@
 <div *ngFor = "let user of users | async"> 
    <div class="row mb-4 justify-content-center">
       <div class = "col-lg-4">
-          {{ user.firstName  }} {{ user.lastName }} 
+          {{ userservice.user.firstName  }} {{ user.lastName }} 
       </div>
       <div class="col-lg-4">
-        {{ user.email }}
+        {{ userservice.user.email }}
       </div>
       <div class="col=lg-2 mr-2">
-          <button type="button" class="btn btn-secondary">Edit</button>
+          <button (click)="userService.editUser()" type="button" class="btn btn-secondary">Edit</button>
       </div>
       <div class="col=lg-2">
-          <button type="button" class="btn btn-danger">Delete</button>
+          <button (click)="userservice.deleteUser()" type="button" class="btn btn-danger">Delete</button>
       </div>
    </div>
    <hr>
 </div>
-<button class="btn">Add New User</button>
+<button (click)="userservice.addUser()" type="button" class="btn">Add User</button>
 
