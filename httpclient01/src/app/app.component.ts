@@ -25,13 +25,6 @@ export class AppComponent implements OnInit {
     this.userservice.getUsers().subscribe(data => {
       this.users = data
     })
-
-    // let apiUrl: string = 'http://localhost:8080/users';
-    // this.users = this.http.get<User[]>(apiUrl);
-    // this.users.subscribe(
-    //   response => console.log(response),
-    //   err => console.log(err)
-  // )
 }
 
 

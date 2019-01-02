@@ -1,0 +1,24 @@
+<h2>Add Post</h2>
+<div class="card card-body mb-3">
+  <form>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="user.firstName" name="firstName" #firstName>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" [(ngModel)] = "user.lastName" name="lastName" #lastName>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" [(ngModel)] = "user.email" name="email" #email>
+    </div>
+    <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control" [(ngModel)] = "user.id" name="id" #id>
+    </div>
+    <button *ngIf= "!isEdit" (click)="addUser(firstName.value, lastName.value, email.value)" class="btn btn-dark btn-block"> Add User</button>
+
+    <button *ngIf= "isEdit" (click)="updateUser(firstName.value, lastName.value, email.value)" class="btn btn-warning btn-block"> Update User</button>
+  </form>
+</div>
