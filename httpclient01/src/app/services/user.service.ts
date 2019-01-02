@@ -8,7 +8,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 export class UserService {
   users:User[];
-  data: Observable<any>;
   apiURL = "http://localhost:8080/users";
 
   

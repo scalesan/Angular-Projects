@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
     this.userservice.getUsers().subscribe(data => {
-      console.log(data)
+      this.users = data
     })
 
     // let apiUrl: string = 'http://localhost:8080/users';
