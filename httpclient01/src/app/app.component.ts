@@ -16,16 +16,25 @@ export class AppComponent implements OnInit {
   user: User;
   users: User[]
   
-
   constructor(private http: HttpClient, private userservice: UserService){
 
   }
-
     ngOnInit() {
     this.userservice.getUsers().subscribe(data => {
-      this.users = data
+      this.users = (data)
     })
 }
+
+
+
+  // deleteUser(){
+  //   console.log("You deleted User");
+  // }
+
+  // updateUser(){
+  //   console.log("You updated User");
+  // }
+
 
 
 

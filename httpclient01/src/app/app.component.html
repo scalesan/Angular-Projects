@@ -13,13 +13,13 @@
         {{ user.email }}
       </div>
       <div class="col=lg-2 mr-2">
-        <button type="button" class="btn btn-secondary">Edit</button>
+        <button type="button" (click) = "userservice.updateUser(user)" class="btn btn-secondary">Edit</button>
       </div>
       <div class="col=lg-2">
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" (click) = "userservice.deleteUser(user)" class="btn btn-danger">Delete</button>
       </div>
     </div>
     <hr>
   </div>
-  <button (click)="user.addUser()" type="button" class="btn">Add User</button>
+  <button (click)="userservice.addUser(user)" type="button" class="btn">Add User</button>
 </div>
